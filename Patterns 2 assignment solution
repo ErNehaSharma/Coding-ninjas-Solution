@@ -1,0 +1,26 @@
+Print the following pattern for n number of rows.
+Note: each line consist of equal number of characters + spaces. Suppose you are printing xth line for N=n. You need to print 1..x followed by (n-x) spaces, again (n-x) spaces followed by x..1
+For eg. N = 5 
+solution:
+
+def print_pattern(n):
+    for i in range(1, n + 1):
+        # Print numbers in ascending order
+        for j in range(1, i + 1):
+            print(j, end='')
+        
+        # Print spaces
+        for j in range(1, n - i + 1):
+            print(' ', end=" ")
+        
+        # Print numbers in descending order
+        for j in range(i, 0, -1):
+            print(j, end="")
+
+        print()
+
+# Read the input
+n = int(input())
+
+# Call the function to print the pattern
+print_pattern(n)
