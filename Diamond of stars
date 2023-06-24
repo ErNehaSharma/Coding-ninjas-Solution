@@ -1,0 +1,70 @@
+Print the following pattern for the given number of rows.
+
+Note: N is always odd.
+
+Pattern for N = 5
+
+Input format :
+N (Total no. of rows and can only be odd)
+
+Output format :
+Pattern in N lines
+
+Constraints :
+1 <= N <= 49
+
+Sample Input 1:
+5
+Sample Output 1:
+  *
+ ***
+*****
+ ***
+  *
+
+Sample Input 2:
+3
+Sample Output 2:
+  *
+ ***
+  *
+
+__________________________________________________________________________________
+solution for this code is 
+def print_pattern(n):
+    # Print upper half of the pattern
+    for i in range(1, n//2 + 1):
+        # Print spaces
+        for j in range(n//2 - i + 1):
+            print(" ", end='')
+
+        # Print stars
+        for k in range(2*i - 1):
+            print("*", end='')
+
+        print()
+
+    # Print middle line
+    for i in range(n):
+        print("*", end='')
+
+    print()
+
+    # Print lower half of the pattern
+    for i in range(n//2, 0, -1):
+        # Print spaces
+        for j in range(n//2 - i + 1):
+            print(" ", end='')
+
+        # Print stars
+        for k in range(2*i - 1):
+            print("*", end='')
+
+        print()
+
+# Taking input from user
+n = int(input())
+
+# Printing pattern
+print_pattern(n)
+_________________________________________________________________________________________________
