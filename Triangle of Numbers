@@ -1,0 +1,51 @@
+Print the following pattern for the given number of rows.
+
+Pattern for N = 4
+
+Input format :
+Integer N (Total no. of rows)
+
+Output format :
+Pattern in N lines
+
+Constraints :
+0 <= N <= 50
+
+Sample Input 1:
+5
+Sample Output 1:
+           1
+         232
+       34543
+     4567654
+   567898765
+
+Sample Input 2:
+4
+Sample Output 2:
+           1
+         232
+       34543
+     4567654
++++++++++++++++++++++++++++++++++++++++++++++++++
+solution of this code is 
+def print_pattern(n):
+    for i in range(1, n + 1):
+        # Print spaces
+        for j in range(1, n - i + 1):
+            print(" ", end="")
+        
+        # Print numbers in increasing order
+        for j in range(i, 2 * i):
+            print(j, end="")
+        
+        # Print numbers in decreasing order
+        for j in range(2 * i - 2, i - 1, -1):
+            print(j, end="")
+        
+        print()
+
+# Example usage:
+n = int(input())
+print_pattern(n)
+++++++++++++++++++++++++++++++++++++++++++++++++
